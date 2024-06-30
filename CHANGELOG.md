@@ -10,23 +10,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
  - simple translation of any page without replicating all wagtail tree structure
-
-<!-- TEMPLATE - keep below to copy for new releases -->
-<!--
-
-
-## [x.y.z] - YYYY-MM-DD
-
-### Added
-
-- ...
-
-### Changed
-
-- ...
-
-### Removed
-
-- ...
-
--->

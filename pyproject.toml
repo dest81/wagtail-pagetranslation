@@ -54,7 +54,7 @@ name = "wagtail_pagetranslation"
 
 [tool.flit.sdist]
 exclude = [
-    "wagtail_pagetranslation/test",
+    "tests",
     "manage.py",
     ".*",
     "*.js",
