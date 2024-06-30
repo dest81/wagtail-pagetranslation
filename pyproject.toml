@@ -55,7 +55,7 @@ name = "wagtail_pagetranslation"
 [tool.flit.sdist]
 exclude = [
     "wagtail_pagetranslation/test",
-    "testmanage.py",
+    "manage.py",
     ".*",
     "*.js",
     "*.json",
@@ -64,4 +64,4 @@ exclude = [
 ]
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "wagtail_pagetranslation.test.settings"
+DJANGO_SETTINGS_MODULE = "tests.testapp.settings"

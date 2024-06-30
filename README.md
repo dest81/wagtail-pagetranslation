@@ -6,7 +6,6 @@ Allows to translate specific pages without replicating all wagtail pages tree st
 [![PyPI version](https://badge.fury.io/py/wagtail-pagetranslation.svg)](https://badge.fury.io/py/wagtail-pagetranslation)
 [![pagetranslation CI](https://github.com/dest81/wagtail-pagetranslation/actions/workflows/test.yml/badge.svg)](https://github.com/dest81/wagtail-pagetranslation/actions/workflows/test.yml)
 
-
 ## Links
 
 - [Documentation](https://github.com/dest81/wagtail-pagetranslation/blob/main/README.md)

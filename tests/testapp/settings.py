@@ -32,8 +32,8 @@ ALLOWED_HOSTS = ["localhost", "testserver"]
 # Application definition
 
 INSTALLED_APPS = [
+    "tests.testapp",
     "wagtail_pagetranslation",
-    "wagtail_pagetranslation.test",
     "wagtail.contrib.search_promotions",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
@@ -71,7 +71,7 @@ MIDDLEWARE = [
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
-ROOT_URLCONF = "wagtail_pagetranslation.test.urls"
+ROOT_URLCONF = "tests.testapp.urls"
 
 TEMPLATES = [
     {

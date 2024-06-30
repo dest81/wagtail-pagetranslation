@@ -1,6 +1,6 @@
 [run]
 branch = True
-include = wagtail_pagetranslation/*
+include = src/wagtail_pagetranslation/*
 omit = */migrations/*,*/tests/*
 
 [report]
