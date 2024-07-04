@@ -8,16 +8,19 @@ Allows to translate specific pages without replicating all wagtail pages tree st
 
 ## Links
 
-- [Documentation](https://github.com/dest81/wagtail-pagetranslation/blob/main/README.md)
-- [Changelog](https://github.com/dest81/wagtail-pagetranslation/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/dest81/wagtail-pagetranslation/blob/main/CONTRIBUTING.md)
-- [Discussions](https://github.com/dest81/wagtail-pagetranslation/discussions)
-- [Security](https://github.com/dest81/wagtail-pagetranslation/security)
+-   [Documentation](https://github.com/dest81/wagtail-pagetranslation/blob/main/README.md)
+-   [Changelog](https://github.com/dest81/wagtail-pagetranslation/blob/main/CHANGELOG.md)
+-   [Contributing](https://github.com/dest81/wagtail-pagetranslation/blob/main/CONTRIBUTING.md)
+-   [Discussions](https://github.com/dest81/wagtail-pagetranslation/discussions)
+-   [Security](https://github.com/dest81/wagtail-pagetranslation/security)
+
+## Motivation
+
+There are multiple approaches to localizing content on your Wagtail site. Solutions such as `wagtail-localize` rely on copying the entire page tree for each language, which can be inefficient. `wagtail-modeltranslation` requires a specific project structure and patches models on the fly, which can be risky. If all you need is to translate a few fields, this library is for you. Simply add TranslationMixin to the Page model, list the fields you want translated, and you're good to go.
 
 ## Installation
 
-- `python -m pip install wagtail-pagetranslation`
-
+-   `python -m pip install wagtail-pagetranslation`
 
 ## How to use
 
@@ -85,7 +88,6 @@ class TranslationMixin(BaseTranslationMixin):
         return request.GET.get("language")
 
 ```
-
 
 ## Contributing
 
