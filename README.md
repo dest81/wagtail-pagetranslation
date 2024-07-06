@@ -5,6 +5,7 @@ Allows to translate specific pages without replicating all wagtail pages tree st
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PyPI version](https://badge.fury.io/py/wagtail-pagetranslation.svg)](https://badge.fury.io/py/wagtail-pagetranslation)
 [![pagetranslation CI](https://github.com/dest81/wagtail-pagetranslation/actions/workflows/test.yml/badge.svg)](https://github.com/dest81/wagtail-pagetranslation/actions/workflows/test.yml)
+[![Code coverage](https://coveralls.io/repos/github/dimkauzh/wagtail-pagetranslation/badge.svg?branch=main)](https://coveralls.io/github/dimkauzh/wagtail-pagetranslation)
 
 ## Links
 
