@@ -5,10 +5,10 @@ Allows to translate specific pages without replicating all wagtail pages tree st
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PyPI version](https://badge.fury.io/py/wagtail-pagetranslation.svg)](https://badge.fury.io/py/wagtail-pagetranslation)
 [![pagetranslation CI](https://github.com/dest81/wagtail-pagetranslation/actions/workflows/test.yml/badge.svg)](https://github.com/dest81/wagtail-pagetranslation/actions/workflows/test.yml)
-[![Code coverage](https://coveralls.io/repos/github/dimkauzh/wagtail-pagetranslation/badge.svg?branch=main)](https://coveralls.io/github/dimkauzh/wagtail-pagetranslation)
+[![Code coverage](https://coveralls.io/repos/github/dest81/wagtail-pagetranslation/badge.svg?branch=main)](https://coveralls.io/github/dest81/wagtail-pagetranslation)
+[![Downloads](https://img.shields.io/pypi/dm/fusion-engine?color=blue)](https://pypi.org/project/wagtail-pagetranslation/)
 
 ## Links
-
 -   [Documentation](https://github.com/dest81/wagtail-pagetranslation/blob/main/README.md)
 -   [Changelog](https://github.com/dest81/wagtail-pagetranslation/blob/main/CHANGELOG.md)
 -   [Contributing](https://github.com/dest81/wagtail-pagetranslation/blob/main/CONTRIBUTING.md)
@@ -21,13 +21,15 @@ There are multiple approaches to localizing content on your Wagtail site. Soluti
 
 ## Installation
 
--   `python -m pip install wagtail-pagetranslation`
+```sh
+python -m pip install wagtail-pagetranslation`
+```
 
 ## How to use
 
 Add "wagtail_pagetranslation" to list of applications after all wagtail apps
 
-```
+```python
 INSTALLED_APPS = [
     "your_wagtail_app_1",
     "your_wagtail_app_2",
@@ -39,13 +41,13 @@ INSTALLED_APPS = [
 
 Set default language for wagtail_pagetranslation app
 
-```
+```python
 WAGTAIL_PAGETRANSLATION_DEFAULT_LANGUAGE = "en"
 ```
 
 by default settings.LANGUAGES will be used
 
-```
+```python
 LANGUAGES = [
     ("en", "English"),
     ("nl", "Dutch"),
@@ -55,7 +57,7 @@ LANGUAGES = [
 
 or you can specify custom list
 
-```
+```python
 WAGTAIL_PAGETRANSLATION_LANGUAGES = [
     ("en", "English"),
     ("nl", "Dutch"),
@@ -66,7 +68,7 @@ WAGTAIL_PAGETRANSLATION_LANGUAGES = [
 To make available translation per page type add TranslationMixin to your custom Page class.
 **Note:** mixin should be added before Page class.
 
-```
+```python
 from wagtail_pagetranslation.translation import TranslationMixin
 
 class HomePage(TranslationMixin, Page):
@@ -78,7 +80,7 @@ class HomePage(TranslationMixin, Page):
 By default URL for translated page is page url + `?lang=<lang_code>`
 This can be change by overriding get_language method:
 
-```
+```python
 from wagtail_pagetranslation.translation import TranslationMixin as BaseTranslationMixin
 
 class TranslationMixin(BaseTranslationMixin):
@@ -117,19 +119,19 @@ python -m pip install flit
 flit install
 ```
 
-### pre-commit
+### Pre-commit
 
 Note that this project uses [pre-commit](https://github.com/pre-commit/pre-commit).
 It is included in the project testing requirements. To set up locally:
 
-```shell
+```sh
 # go to the project directory
-$ cd wagtail-pagetranslation
+cd wagtail-pagetranslation
 # initialize pre-commit
-$ pre-commit install
+pre-commit install
 
 # Optional, run all checks once for this, then the checks will run only on the changed files
-$ git ls-files --others --cached --exclude-standard | xargs pre-commit run --files
+git ls-files --others --cached --exclude-standard | xargs pre-commit run --files
 ```
 
 ### How to run tests
