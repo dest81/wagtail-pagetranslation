@@ -22,7 +22,7 @@ There are multiple approaches to localizing content on your Wagtail site. Soluti
 ## Installation
 
 ```sh
-python -m pip install wagtail-pagetranslation`
+python -m pip install wagtail-pagetranslation
 ```
 
 ## How to use
