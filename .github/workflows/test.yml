@@ -43,12 +43,16 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Install
         run: |
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip setuptools wheel coveralls
           python -m pip install .[ci]
       - name: Test
         run: tox
         env:
           DB: sqlite
+      - name: Upload coverage to Coveralls
+        run: coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
   test-postgres:
     runs-on: ubuntu-latest
@@ -74,10 +78,15 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Install
         run: |
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip setuptools wheel coveralls
           python -m pip install .[ci]
       - name: Test
         run: tox
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/wagtail_pagetranslation
           DB: postgres
+
+      - name: Upload coverage to Coveralls
+        run: coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
