@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "wagtail-pagetranslation"
-authors = [{name = "Ihor Marhitych", email = "dest81@gmail.com"}, {name = "Jura Zakarija", email = "jzakarija@ripe.net"}]
+authors = [{name = "Ihor Marhitych", email = "dest81@gmail.com"}, {name = "Jura Zakarija", email = "jura.zakarija.dev@gmail.com"}]
 description = "Allows to translate specific pages without replicating all wagtail pages tree structure."
 readme = "README.md"
 license = {file = "LICENSE"}
