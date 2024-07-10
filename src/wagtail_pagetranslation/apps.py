@@ -52,13 +52,7 @@ class WagtailPagetranslationAppConfig(AppConfig):
             for field_name in page_model.translatable_fields:
                 original_field = page_model._meta.get_field(field_name)
 
-                fields[field_name] = type(original_field)(
-                    *original_field.deconstruct()[2],
-                    **{
-                        attr: getattr(original_field, attr)
-                        for attr in original_field.deconstruct()[3]
-                    },
-                )
+                fields[field_name] = original_field.clone()
 
                 panels.append(FieldPanel(field_name))
 
